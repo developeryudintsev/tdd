@@ -8,6 +8,7 @@ beforeEach(() => {
     city = {
         title: 'Minsk',
         houses: [{
+            id:1,
             buildedAt: 2012,
             repaired: false,
             address:{
@@ -17,6 +18,7 @@ beforeEach(() => {
                 }
             }
         }, {
+            id:2,
             buildedAt: 2008,
             repaired: true,
             address:{
@@ -26,6 +28,7 @@ beforeEach(() => {
                 }
             }
         }, {
+            id:3,
             buildedAt: 2088,
             repaired: false,
             address:{
@@ -60,6 +63,10 @@ beforeEach(() => {
         citizenNumber: 100000
     }
 })
+
+//-----------------------------------------
+
+
 test.skip('test city should contains 3 houses', () => {
     expect(city.houses.length).toBe(3)
 
@@ -84,3 +91,7 @@ test.skip('test city should hospital and fire station', () => {
     //action
     //expect result
 })
+
+
+
+

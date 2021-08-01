@@ -81,7 +81,7 @@ test.skip(' houses street',()=>{
     expect(result.length).toBe(3)
 })
 
-test('create street messages',()=>{
+test.skip('create street messages',()=>{
     let result=streetMessages(city,' dont elect to Luka');
     expect(result.length).toBe(3);
     expect(result[0]).toBe('White street dont elect to Luka')

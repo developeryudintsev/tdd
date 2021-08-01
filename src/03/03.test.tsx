@@ -52,3 +52,14 @@ test.skip('student live in Minsk', () => {
     expect(result1).toBe(false);
     expect(result2).toBe(true);
 })
+
+
+
+
+
+
+
+
+
+
+

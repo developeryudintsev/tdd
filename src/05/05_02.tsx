@@ -1,6 +1,6 @@
 //тесты+map
 
-import {cityType} from "../02/02_02";
+// import {cityType} from "../02/02_02";
 
 export let listOfGovernmentBuildings=(city:cityType)=>{
     return city.governmentBuildings.map(m=>m.type);

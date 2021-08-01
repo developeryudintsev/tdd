@@ -15,6 +15,7 @@ beforeEach(() => {
     city = {
         title: 'Minsk',
         houses: [{
+            id:1,
             buildedAt: 2012,
             repaired: false,
             address:{
@@ -24,6 +25,7 @@ beforeEach(() => {
                 }
             }
         }, {
+            id:2,
             buildedAt: 2008,
             repaired: false,
             address:{
@@ -33,6 +35,7 @@ beforeEach(() => {
                 }
             }
         }, {
+            id:3,
             buildedAt: 2088,
             repaired: false,
             address:{
@@ -71,7 +74,13 @@ beforeEach(() => {
 test.skip('add money to Hospital',()=>{
     expect(city.governmentBuildings[0].budget).toBe(200000);
     let bdMoney=moneyToHospital(city,300000);
-    expect(city.governmentBuildings[0].budget).toBe(500000);
+
+   expect(city.governmentBuildings[0].budget).toBe(500000);
+})
+test.skip('FireSTATION money',()=>{
+    let bdMoney=moneyToFireSTATION(city,300000);
+    expect(city.governmentBuildings[1].budget).toBe(200000);
+
 })
 
 test.skip('add money to FireSTATION',()=>{
@@ -100,7 +109,7 @@ test.skip('staffCount',()=>{
     expect(city.governmentBuildings[0].staffCount).toBe(0);
 })
 
-test('change city',()=>{
+test.skip('change city',()=>{
     expect(city.title).toBe('Minsk');
     changeCity(city,'San-Hose');
     expect(city.title).toBe('San-Hose')
